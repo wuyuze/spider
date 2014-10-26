@@ -29,9 +29,9 @@ def getAllList(url):
     mkdir(dirname)
     content = urllib2.urlopen(url).read()
     soup = BeautifulSoup(content.decode("utf-8").replace(r'\xa0', ' '))
-    print(soup.title.string)
+                    print(soup.title.string)
     #filename = i[7:-8]
-    #filepath = os.getcwd() + os.sep + dirname + os.sep + filename + '.html'
+    #  filepath = os.getcwd() + os.sep + dirname + os.sep + filename + '.html'
     #f = open(filepath, 'wb')
     #f.write(content)
     #f.close()
