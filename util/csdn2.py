@@ -24,7 +24,7 @@ def getStore(cnt, url):
 
 
 def getAllURLs():
-    urls = []
+    urls = ['http://www.jianshu.com/collection/723de9bac3cd',]
     cnt = 0
     for i in xrange(1, 8):
         urls.append('http://blog.sina.com.cn/s/articlelist_1191258123_0_' + str(i) + '.html')
