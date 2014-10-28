@@ -22,18 +22,6 @@ def mkdir(filedir):
         os.mkdir(filedir)
 
 
-def getStore(dir, cnt, url):
-    text = urllib2.urlopen('http://www.jianshu.com' + url)
-    context = text.read()
-    text.close()
-    mkdir(dir)
-    filepath = os.getcwd() + os.sep + dir + os.sep + str(cnt) + '.html'
-    filename = 'hanhan/' + str(cnt) + '.html'
-    f = open(filepath, 'w')
-    f.write(context)
-    f.close()
-
-
 def getasay(url):
     cnt = 0
     response = urllib.urlopen(url)
@@ -46,7 +34,7 @@ def getasay(url):
 
 
 def getAllURLs():
-    thousand = 'http://www.jianshu.com/collection/723de9bac3cd'
+    thousand = 'http://www.jianshu.com/collection/f16b3d483ec2?max_id=40472'
     fancy = 'http://www.jianshu.com/collection/6e34977b3711'
     poem = 'http://www.jianshu.com/collection/655e6db2abc7'
     # urlList = ['http://www.jianshu.com/collection/723de9bac3cd',
@@ -55,8 +43,8 @@ def getAllURLs():
     # 每天写一千字改变自己  怪东西 竹间诗筏
     # for i in urlList:
     getasay(thousand)
-    getasay(fancy)
-    getasay(poem)
+    #getasay(fancy)
+    #getasay(poem)
 
 
 if __name__ == '__main__':

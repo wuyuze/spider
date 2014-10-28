@@ -6,7 +6,7 @@ import os
 
 from bs4 import BeautifulSoup
 
-from tools import getArt, savefile
+from tools import getart, savefile
 
 
 def getPageURLs(url):
@@ -48,7 +48,7 @@ def getasay(url):
     tmp = getPageURLs(url)
     for k in tmp[0:100]:
         cnt += 1
-        getArt.saveart(soup.title.string, 'http://www.jianshu.com' + k)
+        getart.saveart(soup.title.string, 'http://www.jianshu.com' + k)
         # getStore('Ç§±ä', cnt, k)
 
 
