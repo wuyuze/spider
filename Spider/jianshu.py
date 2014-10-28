@@ -6,7 +6,7 @@ import os
 
 from bs4 import BeautifulSoup
 
-from Utils import getArt
+from tools import getArt
 
 
 def getPageURLs(url):
