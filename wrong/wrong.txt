@@ -1,0 +1,29 @@
+
+def saveart(dir, url):
+    response = urllib.urlopen(url)
+    soup = BeautifulSoup(response)
+    alinks = soup.find_all('title')
+    # print(soup.title)
+    sss = soup.title.string
+    # print(sss)
+    ssss = '<title>一个关于什么的故事</title>'
+    reg = re.compile(r'.+?>(.+?)</.+?')
+    stra = reg.findall(ssss)
+    print(stra[0])
+    ss = soup.title.string.replace("</title>", "").replace("<title>", "")
+    # print(ss)
+    # print(alinks)
+    blinks = soup.find_all('div class="show-content"')  # print(soup.find())f.write(content.string)
+    # print(blinks)
+    mkdir(dir)
+    strs = soup.findAll(name='p', attrs={'class': 'show-content"'})
+
+    content = soup.findAll(attrs={"class": "show-content"})
+
+    filepath = os.getcwd() + os.sep + dir + os.sep + soup.title.string
+    print(url)
+    print filepath
+    f = open(r''+filepath + '.htm', 'w')
+    cont = str(content[0])
+    f.write(cont)
+    f.close()
